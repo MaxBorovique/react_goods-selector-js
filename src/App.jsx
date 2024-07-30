@@ -70,6 +70,13 @@ export const App = () => {
                 data-cy="GoodTitle"
                 className="is-vcentered"
                 onClick={() => setSelectedGood(good)}
+                role="button"
+                tabIndex="0"
+                onKeyDown={e => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    setSelectedGood(good);
+                  }
+                }}
               >
                 {good}
               </td>
