@@ -66,19 +66,19 @@ export const App = () => {
                 )}
               </td>
 
-              <td
-                data-cy="GoodTitle"
-                className="is-vcentered"
-                onClick={() => setSelectedGood(good)}
-                role="button"
-                tabIndex="0"
-                onKeyDown={e => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    setSelectedGood(good);
-                  }
-                }}
-              >
-                {good}
+              <td data-cy="GoodTitle" className="is-vcentered">
+                <button
+                  type="button"
+                  className="button-class"
+                  onClick={() => setSelectedGood(good)}
+                  onKeyDown={e => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      setSelectedGood(good);
+                    }
+                  }}
+                >
+                  {good}
+                </button>
               </td>
             </tr>
           ))}
